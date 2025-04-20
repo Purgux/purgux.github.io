@@ -3,24 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PURGUX - Genesis Coupe</title>
+  <title>My Car Page</title>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body, html {
       height: 100%;
-      width: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
+      font-family: Arial, sans-serif;
       overflow: hidden;
     }
 
-    /* Background video */
-    video#bg-video {
+    .video-bg {
       position: fixed;
       top: 0;
       left: 0;
@@ -30,66 +27,56 @@
       z-index: -1;
     }
 
-    .container {
+    .content {
+      position: relative;
       height: 100%;
-      width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
       text-align: center;
-      backdrop-filter: brightness(0.7);
+      backdrop-filter: brightness(0.8);
     }
 
-    .title {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #7aa0ff;
+    .insta-link {
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: background 0.3s;
     }
 
-    .subtitle {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      color: #ccc;
+    .insta-link:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .insta-icon {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 40px;
-      height: 40px;
-      transition: transform 0.2s ease;
-    }
-
-    .insta-icon:hover {
-      transform: scale(1.15);
+      width: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Background Video -->
-  <video autoplay muted loop id="bg-video">
-    <source src="bg.mp4" type="video/mp4">
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="bg.mp4.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- Text content -->
-  <div class="container">
-    <div class="title">PURGUX</div>
-    <div class="subtitle">Genesis Coupe 3.8 · 2016</div>
+  <div class="content">
+    <h1>Welcome to My Car Page</h1>
+    <a class="insta-link" href="https://instagram.com/YOUR_USERNAME" target="_blank">
+      <img class="insta-icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon">
+      Follow me on Instagram
+    </a>
   </div>
-
-  <!-- Instagram Icon (add your link later) -->
-  <a href="https://instagram.com/yourhandle" target="_blank">
-    <img 
-      class="insta-icon" 
-      src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" 
-      alt="Instagram"
-    />
-  </a>
 
 </body>
 </html>
+
 
