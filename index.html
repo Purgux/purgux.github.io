@@ -2,60 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PURGUX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PURGUX - Genesis Coupe</title>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    body {
-      height: 100vh;
+    body, html {
+      height: 100%;
       width: 100%;
-      background: linear-gradient(-45deg, #0f0f0f, #1c1c1c, #2a2a2a, #1a1a1a);
-      background-size: 400% 400%;
-      animation: gradientShift 20s ease infinite;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       color: white;
       overflow: hidden;
+    }
+
+    /* Background video */
+    video#bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      height: 100%;
+      width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: url("YOUR_IMAGE_URL_HERE") no-repeat center center/cover;
-      opacity: 0.1;
-      z-index: 0;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
       text-align: center;
+      backdrop-filter: brightness(0.7);
     }
 
     .title {
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: bold;
-      color: #8ab4f8;
-      text-shadow: 0 0 10px rgba(138,180,248,0.5);
+      color: #7aa0ff;
     }
 
     .subtitle {
-      font-size: 1.2rem;
-      margin-top: 1rem;
+      font-size: 1.5rem;
+      margin-top: 10px;
       color: #ccc;
     }
 
@@ -63,32 +57,39 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 10;
-    }
-
-    .insta-icon img {
       width: 40px;
       height: 40px;
       transition: transform 0.2s ease;
     }
 
-    .insta-icon img:hover {
-      transform: scale(1.1);
+    .insta-icon:hover {
+      transform: scale(1.15);
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
 
-  <div class="content">
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Text content -->
+  <div class="container">
     <div class="title">PURGUX</div>
     <div class="subtitle">Genesis Coupe 3.8 · 2016</div>
   </div>
 
-  <!-- Instagram Icon -->
-  <a class="insta-icon" href="https://instagram.com/yourhandle" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  <!-- Instagram Icon (add your link later) -->
+  <a href="https://instagram.com/yourhandle" target="_blank">
+    <img 
+      class="insta-icon" 
+      src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" 
+      alt="Instagram"
+    />
   </a>
+
 </body>
 </html>
 
