@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Purgux</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PURGUX</title>
   <style>
-    body {
+    * {
       margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: url("car.jpg.webp") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      overflow: hidden;
+      text-align: center;
+      backdrop-filter: brightness(0.6);
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px 60px;
+      border-radius: 12px;
     }
 
     h1 {
-      font-size: 5rem;
-      background: linear-gradient(to right, #00f0ff, #b300ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 0;
+      font-size: 3em;
+      color: #8ab4f8;
     }
 
     p {
-      font-size: 1.5rem;
-      color: #ccc;
-      margin-top: 20px;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
-      color: #444;
+      font-size: 1.2em;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Purgux</h1>
-  <p>Genesis Coupe 3.8 2016</p>
-  <footer>© 2025 Purgux | Website powered by GitHub Pages</footer>
+  <div class="content">
+    <h1>PURGUX</h1>
+    <p>Genesis Coupe 3.8 · 2016</p>
+  </div>
 </body>
 </html>
+
