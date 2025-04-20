@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PURGUX</title>
   <style>
     * {
@@ -12,40 +12,83 @@
     }
 
     body {
-      background: url("car.jpg.webp") no-repeat center center fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
+      height: 100vh;
+      width: 100%;
+      background: linear-gradient(-45deg, #0f0f0f, #1c1c1c, #2a2a2a, #1a1a1a);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
-      backdrop-filter: brightness(0.6);
+      position: relative;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: url("YOUR_IMAGE_URL_HERE") no-repeat center center/cover;
+      opacity: 0.1;
+      z-index: 0;
     }
 
     .content {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 30px 60px;
-      border-radius: 12px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
     }
 
-    h1 {
-      font-size: 3em;
+    .title {
+      font-size: 4rem;
+      font-weight: bold;
       color: #8ab4f8;
+      text-shadow: 0 0 10px rgba(138,180,248,0.5);
     }
 
-    p {
-      font-size: 1.2em;
-      margin-top: 10px;
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+
+    .insta-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .insta-icon img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease;
+    }
+
+    .insta-icon img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
+  <div class="overlay"></div>
+
   <div class="content">
-    <h1>PURGUX</h1>
-    <p>Genesis Coupe 3.8 · 2016</p>
+    <div class="title">PURGUX</div>
+    <div class="subtitle">Genesis Coupe 3.8 · 2016</div>
   </div>
+
+  <!-- Instagram Icon -->
+  <a class="insta-icon" href="https://instagram.com/yourhandle" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
 </body>
 </html>
 
