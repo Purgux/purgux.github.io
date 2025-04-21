@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Car Page</title>
+  <title>Purgux</title>
   <style>
     * {
       margin: 0;
@@ -31,33 +31,63 @@
       position: relative;
       height: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
       color: white;
       text-align: center;
       backdrop-filter: brightness(0.8);
     }
 
-    .insta-link {
-      margin-top: 20px;
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    p.description {
+      font-size: 20px;
+      opacity: 0.8;
+    }
+
+    .socials-left, .socials-right {
+      position: fixed;
+      bottom: 20px;
+      display: flex;
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .socials-left {
+      left: 20px;
+    }
+
+    .socials-right {
+      right: 20px;
+    }
+
+    .socials-left a,
+    .socials-right a {
       text-decoration: none;
-      color: white;
-      font-size: 18px;
-      background: rgba(0,0,0,0.4);
-      padding: 10px 20px;
-      border-radius: 10px;
-      transition: background 0.3s;
     }
 
-    .insta-link:hover {
-      background: rgba(255, 255, 255, 0.2);
+    .social-icon {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0.95);
+      transition: transform 0.3s, filter 0.3s;
     }
 
-    .insta-icon {
-      width: 24px;
-      vertical-align: middle;
-      margin-right: 8px;
+    .social-icon:hover {
+      transform: scale(1.1);
+      filter: brightness(1.2);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -69,14 +99,29 @@
   </video>
 
   <div class="content">
-    <h1>Welcome to My Car Page</h1>
-    <a class="insta-link" href="https://instagram.com/YOUR_USERNAME" target="_blank">
-      <img class="insta-icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon">
-      Follow me on Instagram
+    <h1>Purgux</h1>
+    <p class="description">Hi Stalker.</p>
+  </div>
+
+  <!-- Bottom Left: Instagram -->
+  <div class="socials-left">
+    <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
+      <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon">
+    </a>
+  </div>
+
+  <!-- Bottom Right: GitHub, Discord, Roblox -->
+  <div class="socials-right">
+    <a href="https://radicnt.github.io" target="_blank">
+      <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+    </a>
+    <a href="https://discord.com/invite/YOUR_DISCORD" target="_blank">
+      <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">
+    </a>
+    <a href="https://www.roblox.com/groups/YOUR_GROUP_ID" target="_blank">
+      <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968985.png" alt="Roblox Group">
     </a>
   </div>
 
 </body>
 </html>
-
-
